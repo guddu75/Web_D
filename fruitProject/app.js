@@ -18,3 +18,59 @@ client.connect(function(err){
     client.close();
 
 });
+
+const insertDocuments = function(db, callback) {
+
+    const collection = db.collection('fruits');
+
+    collection.insertMany([
+
+    ],function(err,result){
+        assert.equal(err, result);
+        assert.equal(3, result.result.n);
+        assert.equal(3,result.ops.length);
+    })
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
